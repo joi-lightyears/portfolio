@@ -4,7 +4,7 @@ import { sidebarMenu, socialIcons } from '../data/data'
 
 function Sidebar() {
   return (
-    <aside className='aside'>
+    <aside>
         <div className="aside-wrapper">
             <Link to={'/'} className='picture'>
                 <div className="myself"></div>
@@ -13,7 +13,7 @@ function Sidebar() {
                 const {text, url, icon} = link
                 return(
                     <li key={index}>
-                        <NavLink to={url}>
+                        <NavLink className='link-section' to={url}>
                             {icon}
                             {text}
                         </NavLink>
@@ -24,7 +24,7 @@ function Sidebar() {
                 {socialIcons.map((platform,index)=>{
                     const {icon, url} = platform
                     return(
-                        <a href={url} key={index}>
+                        <a href={url} target="_blank" rel="noopener noreferrer" key={index}>
                             {icon}
                         </a>
                     )

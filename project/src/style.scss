@@ -20,10 +20,107 @@ textarea {
 body{
     // background-color: #1d1d1d;
 }
-.myself{
-    background: url('./assets/images/pokemonLogoMain.png');
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-size: cover;
+
+
+:root{
+    --sidebar: #181818;
+    --sidebar-link-icon: #aaa6d8;
+    --sidebar-social-icon: #727277;
+    --sidebar-hover: #abaad6;
 }
+
+
+
+// home
+.home, .container{
+    height: 100vh;
+    width: 100%;
+}
+
+// sidebar
+aside{
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    background: var(--sidebar);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .aside-wrapper{
+        width: 100%;
+        min-height: 90vh;
+        overflow-y: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        .picture{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .myself{
+                background: url('./assets/images/joitaro.jpg');
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                border-radius: 5px;
+            }
+        }
+        .side-link{
+            margin-top: 50px;
+            li{
+                line-height: 3.8;
+                display: flex;
+                border-top: 5px solid #1d1d1d;
+                .link-icon{
+                    font-size: 15px;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    color: var(--sidebar-link-icon);
+                }
+                .link-section{
+                    color: #6d6d6d;
+                    font-weight: bold;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    transition: 0.3s ease-out;
+                    &:hover{
+                        color: var(--sidebar-hover);
+                    }
+                }
+            }
+        
+        }
+        .social-icon{
+            right: 100px;
+            bottom: 0;
+            border-top: 5px solid #1d1d1d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 5px;
+            }
+            .icon{
+                font-size: 24px;
+                color: var(--sidebar-social-icon);
+                transition: 0.3s ease-out;
+                &:hover{
+                    color: var(--sidebar-hover);
+                }
+            }
+        }
+    }
+}
+
+
+
+    
