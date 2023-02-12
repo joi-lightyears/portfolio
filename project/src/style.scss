@@ -16,6 +16,8 @@ textarea {
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body{
     background-color: #1d1d1d;
@@ -124,19 +126,103 @@ aside{
 }
 
 // header
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+}
 .header-container{
     height: 100vh;
     display: flex;
     align-items: center;
     margin-left: 150px;
     padding-left: 80px;
+    position: relative;
+    &:after{
+        content: '';
+        width: 50%;
+        height: 50%;
+        // background-color: #3ac5c9;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url('./assets/images/headerBackground.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        opacity: 0.3;
+        border-radius: 15px 0 0 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    
     .intro{
+        .fake-code{
+            color: #727277;
+            font-family: 'Roboto Mono';
+            margin-bottom: 10px;
+            margin-left: -20px;
+            animation: fadeInLeftToRight 1s ease-out forwards;
+        }
+        .scrolldown{
+            writing-mode: vertical-rl;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: 10px;
+            bottom: 10px;
+            color: #dadada;
+            span{
+                animation: moveUpDown 1s ease infinite;
+                margin-bottom: 10px;
+            }
+        }
         h1{
             font-size: 3rem;
             line-height: 4rem;
             color: #ffffff;
             letter-spacing: -1px;
             font-weight: 700;
+            span{
+                display: inline-block;
+                user-select: none;
+                &:hover{
+                    color: #3ac5c9;
+                }
+            }
+            span.myName span{
+                color: #3ac5c9;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
         }
         .cv-btn{
             display: block;
@@ -145,10 +231,11 @@ aside{
             max-width: 200px;
             line-height: 50px;
             margin: 50px 0;
-            animation: fadeInAnimation 1s 1.8s backwards;
             position: relative;
             overflow: hidden;
             border: 1px solid #3ac5c9;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
             div{
                 width: 100%;
                 height: 100%;
@@ -184,3 +271,43 @@ aside{
 }
 
     
+// about
+.abt-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    padding-left: 80px;
+    .content{
+        .reveal-section{
+            opacity: 0;
+        }
+        .fake-code{
+            color: #727277;
+            font-family: 'Roboto Mono';
+            // margin-top: 10px;
+            margin-left: -20px;
+            // animation: fadeInLeftToRight 1s ease-out forwards;
+        }
+        h1{
+            font-size: 3rem;
+            line-height: 4rem;
+            letter-spacing: -1px;
+            font-weight: 700;
+            span{
+                display: inline-block;
+                color: #3ac5c9;
+                user-select: none;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+        p{
+            max-width: 50%;
+            color: #ffffff;
+            font-size: 1.5rem;
+            // animation: fadeIn 1s ease-out forwards;
+        }
+    }
+}
