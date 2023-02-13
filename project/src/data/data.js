@@ -4,6 +4,8 @@ import {SiNounproject} from 'react-icons/si'
 import {RiContactsLine} from 'react-icons/ri'
 import {GrGithub} from 'react-icons/gr'
 import {MdEmail} from 'react-icons/md'
+import {TbWorld} from 'react-icons/tb'
+import testImg from '../assets/images/joitaro.jpg'
 const introText = "Hi!,| I'm |Nguyen Thanh Dat|,| a third-year IT major at the| Ho Chi Minh City University of Transport"
 
 const sidebarMenu = [
@@ -39,4 +41,68 @@ const socialIcons = [
         url: 'mailto:nguyenthanhdat1412joitaro@gmail.com'
     },
 ]
-export {sidebarMenu, socialIcons, introText}
+const projects = [
+    {
+        id: 1,
+        name: 'Translating Chat App',
+        desc: "I created this project and It's called PDBB (my fellow friends' name: Phat Dat Bao Bao). This is a WebChat that supports multi language messaging. And It's pretty fun ^^",
+        stack: 'ReactJS HTML SCSS JAVASCRIPT FIREBASE',
+        gitHubUrl:{
+            icon: <GrGithub className='icon'/>,
+            url: 'https://github.com/joi-lightyears/chatReactFirebase',
+        },
+        website:{
+            icon: <TbWorld className='icon'/>,
+            url: 'https://pdbbchat.vercel.app/login',
+        },
+        imgURL: testImg,
+    },
+    {
+        id: 2,
+        name: 'Translating Chat App',
+        desc: "I created this project and It's called PDBB (my fellow friends' name: Phat Dat Bao Bao). This is a WebChat that supports multi language messaging. And It's pretty fun ^^",
+        stack: 'ReactJS HTML SCSS JAVASCRIPT FIREBASE',
+        gitHubUrl:{
+            icon: <GrGithub className='icon'/>,
+            url: 'https://github.com/joi-lightyears/chatReactFirebase',
+        },
+        website:{
+            icon: <TbWorld className='icon'/>,
+            url: 'https://pdbbchat.vercel.app/login',
+        },
+        imgURL: testImg,
+    },
+    {
+        id: 3,
+        name: 'Translating Chat App',
+        desc: "I created this project and It's called PDBB (my fellow friends' name: Phat Dat Bao Bao). This is a WebChat that supports multi language messaging. And It's pretty fun ^^",
+        stack: 'ReactJS HTML SCSS JAVASCRIPT FIREBASE',
+        gitHubUrl:{
+            icon: <GrGithub className='icon'/>,
+            url: 'https://github.com/joi-lightyears/chatReactFirebase',
+        },
+        website:{
+            icon: <TbWorld className='icon'/>,
+            url: 'https://pdbbchat.vercel.app/login',
+        },
+        imgURL: testImg,
+    },
+    {
+        id: 4,
+        name: 'Translating Chat App',
+        desc: "I created this project and It's called PDBB (my fellow friends' name: Phat Dat Bao Bao). This is a WebChat that supports multi language messaging. And It's pretty fun ^^",
+        stack: 'ReactJS HTML SCSS JAVASCRIPT FIREBASE',
+        gitHubUrl:{
+            icon: <GrGithub className='icon'/>,
+            url: 'https://github.com/joi-lightyears/chatReactFirebase',
+        },
+        website:{
+            icon: <TbWorld className='icon'/>,
+            url: 'https://pdbbchat.vercel.app/login',
+        },
+        imgURL: testImg,
+    },
+]
+
+
+export {sidebarMenu, socialIcons, introText, projects}

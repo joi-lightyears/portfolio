@@ -17,8 +17,11 @@ function Header() {
   return (
     // <div>Header</div>
     <section className='header-container'>
-        <main className='intro'>
+        <div className='intro'>
             {/* intro */}
+            <div className="fake-code-typing">
+               C:\dat\portfolio&gt;<p>npx create-react-app project</p>
+            </div>
             <div className="fake-code">&lt;h1&gt;</div>
             <h1>
                 {arr[0].split("").map((letter,index)=>{
@@ -65,7 +68,7 @@ function Header() {
             <div className="scrolldown">
                 <span>scrolldown</span> <AiOutlineArrowDown/>
             </div>
-        </main>
+        </div>
     </section>
   )
 }
