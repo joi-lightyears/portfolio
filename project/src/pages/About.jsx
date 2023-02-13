@@ -2,7 +2,7 @@ import React from 'react'
 import TextSpan from '../TextSpan'
 import Reveal from 'react-awesome-reveal'
 import { keyframes } from "@emotion/react";
-import '../data/globe'
+
 // import Fade from 'react-awesome-reveal'
 
 function About() {
@@ -30,6 +30,16 @@ function About() {
       transform: translateX(-20px);
   }
     `;
+    const fadeInFromRight = keyframes`
+    from {
+      opacity: 0;
+      transform: translateX(400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+      `;
   return (
     <section className='abt-container'>
       <div className="content">
@@ -59,10 +69,28 @@ function About() {
         </Reveal>
         <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
           <div className="fake-code">&lt;/p&gt;</div>
-          <div className="fake-code">&lt;/about&gt;</div>
         </Reveal>
       </div>
-      <div id="skills-container">
+      <div className="skills">
+      <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+        <div className="fake-code">&lt;skills&gt;</div>
+      </Reveal>
+      <Reveal className='reveal-section' keyframes={fadeInFromRight}>
+          <div className="banner-texts">
+            <div className="">
+              HTML - <span>Node JS - </span>CSS - <span>ReactJS - </span>JSON - <span>TypeScript - </span>npm - <span>Git - </span>jQuery - <span>Sass - </span>React Native - <span>Redux - </span>
+              HTML - <span>Node JS - </span>CSS - <span>ReactJS - </span>JSON - <span>TypeScript - </span>npm - <span>Git - </span>jQuery - <span>Sass - </span>React Native - <span>Redux - </span>
+            </div>
+            <div className="">
+              HTML - <span>Node JS - </span>CSS - <span>ReactJS - </span>JSON - <span>TypeScript - </span>npm - <span>Git - </span>jQuery - <span>Sass - </span>React Native - <span>Redux - </span>
+              HTML - <span>Node JS - </span>CSS - <span>ReactJS - </span>JSON - <span>TypeScript - </span>npm - <span>Git - </span>jQuery - <span>Sass - </span>React Native - <span>Redux - </span>
+            </div>
+          </div>
+      </Reveal>
+        <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+          <div className="fake-code">&lt;/skills&gt;</div>
+          <div className="fake-code">&lt;/about&gt;</div>
+        </Reveal>
       </div>
     </section>
   )
