@@ -230,6 +230,7 @@ aside{
                 white-space: nowrap;
                 overflow: hidden;
                 animation:typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+                
             }
         }
         h1{
@@ -512,4 +513,136 @@ aside{
             }
         }
     }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #2a2a2a inset !important;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: #dadada !important;
+}
+.contact-container{
+    height: 100vh;
+    margin-left: 150px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .reveal-section{
+        opacity: 0;
+    }
+    .content{
+        // height: 40%;
+        h1{
+            font-size: 3rem;
+            line-height: 4rem;
+            letter-spacing: -1px;
+            font-weight: 700;
+            span{
+                display: inline-block;
+                color: #3ac5c9;
+                user-select: none;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+        .form-section{
+            width: 60%;
+            height: 70%;
+            margin-top: 20px;
+            .contact-form{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 100%;
+                // height: 100%;
+                .input-section{
+                    // width: 100%;
+                    // height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    input, textarea{
+                        outline: none;
+                        border: none;
+                        background-color: #2a2a2a;
+                        color: #dadada;
+                        padding: 10px 20px;
+                        font-size: 1.1rem;
+                    }
+                }
+                
+                
+
+
+                .row1{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .name-input{
+                        width: 49%;
+                    }
+                    .email-input{
+                        width: 49%;
+                    }
+                }
+                .row2{
+                    width: 100%;
+                }
+                .row3{
+                    width: 100%;
+                    max-width: 100%;
+                    height: 100px;
+                    max-height: 100px;
+                }
+                .submit-btn{
+                    width: 42%;
+                    position: relative;
+                    margin-top: 20px;
+                    overflow: hidden;
+                    input{
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        background-color: transparent;
+                        color: #3ac5c9;
+                        padding: 10px 20px;
+                        
+                        font-size: 1.1rem;
+                        border: 1px solid #3ac5c9;
+                        transition: 0.3s ease-out;
+                    }
+                    
+                    &:after{
+                        content: '';
+                        z-index: -1;
+                        position: absolute;
+                        width: 0%;
+                        height: 100%;
+                        background-color: #3ac5c9;
+                        top: 0;
+                        left: -5%;
+                        transform: skewX(-20deg);
+                        transition:  0.3s linear;
+                    }
+                    &:hover{
+                        input{
+                            color: #1d1d1d;
+                        }
+                        &::after{
+                            width: 110%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.toast{
+    background-color: #2a2a2a;
+    color: #dadada;
 }

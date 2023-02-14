@@ -76,7 +76,7 @@ function ProjectsPage() {
       <Reveal className='reveal-section' keyframes={bottomFadeIn}>
         <div className="projects-wrapper">
           {projects.map((project,index)=>{
-            return <Projects {...project} key='index'/>
+            return <Projects {...project} key={index}/>
           })}
         </div>
       </Reveal>
