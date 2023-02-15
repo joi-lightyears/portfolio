@@ -79,84 +79,89 @@ const handleChange =(e)=>{
           color: '#dadada',
         },
       }}/></div>
+
       <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-      <div className="fake-code">&lt;contact&gt;</div>
+        <div className="fake-code">&lt;contact&gt;</div>
       </Reveal>
       <div className="content">
-      <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-        <div className="fake-code">&lt;h4&gt;</div>
+        <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+          <div className="fake-code">&lt;h4&gt;</div>
         </Reveal>
+
         <Reveal className='reveal-section' keyframes={bottomFadeIn}>
-        <h1>
-              {heading.split('').map((letter,index)=>{
-                return(
-                  <TextSpan key={index}>
-                      {letter === " "? '\u00A0' : letter}
-                  </TextSpan>
-                )
-              })}
-        </h1>
+          <h1>
+                {heading.split('').map((letter,index)=>{
+                  return(
+                    <TextSpan key={index}>
+                        {letter === " "? '\u00A0' : letter}
+                    </TextSpan>
+                  )
+                })}
+          </h1>
         </Reveal>
+
         <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-        <div className="fake-code">&lt;/h4&gt;</div>
+          <div className="fake-code">&lt;/h4&gt;</div>
         </Reveal>
+
         <div className="form-section">
-        <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-          <div className="fake-code">&lt;form&gt;</div>
-        </Reveal>
+          <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+            <div className="fake-code">&lt;form&gt;</div>
+          </Reveal>
           <form action="" className="contact-form" onSubmit={handleSubmit} ref={form}>
                 <div className="input-section">
                   <Reveal className='reveal-section' keyframes={bottomFadeIn}>
-                  <div className="row1">
+                    <div className="row1">
+                      <input type="text"
+                        required
+                        name='name'
+                        placeholder='Name'
+                        value={validInfo.name}
+                        autoComplete='false'
+                        onChange={handleChange}
+                        className='name-input'
+                      />
+                      <input type="email"
+                        required
+                        name='email'
+                        placeholder='Email'
+                        value={validInfo.email}
+                        autoComplete='false'
+                        onChange={handleChange}
+                        className='email-input'
+                      />
+                    </div>
+
                     <input type="text"
-                    required
-                    name='name'
-                    placeholder='Name'
-                    value={validInfo.name}
-                    autoComplete='false'
-                    onChange={handleChange}
-                    className='name-input'
+                      required
+                      name='subject'
+                      placeholder='Subject'
+                      value={validInfo.subject}
+                      autoComplete='false'
+                      onChange={handleChange}
+                      className='row2'
                     />
-                    <input type="email"
-                    required
-                    name='email'
-                    placeholder='Email'
-                    value={validInfo.email}
-                    autoComplete='false'
-                    onChange={handleChange}
-                    className='email-input'
-                    />
-                  </div>
-                  <input type="text"
-                  required
-                  name='subject'
-                  placeholder='Subject'
-                  value={validInfo.subject}
-                  autoComplete='false'
-                  onChange={handleChange}
-                  className='row2'
-                  />
-                  <textarea placeholder='Message'
-                    required
-                    autoComplete='false'
-                    name="message"
-                    type='text' value={validInfo.message}
-                    onChange={handleChange}
-                    className='row3'
-                    >
+                    <textarea placeholder='Message'
+                      required
+                      autoComplete='false'
+                      name="message"
+                      type='text' value={validInfo.message}
+                      onChange={handleChange}
+                      className='row3'
+                      >
                     </textarea>
                 </Reveal>
 
                 </div>
                 <Reveal className='reveal-section' keyframes={bottomFadeIn}>
-                <div className="submit-btn">
-                  <input value='Send' type="submit" />
-                </div>
+                  <div className="submit-btn">
+                    <input value='Send' type="submit" />
+                  </div>
                 </Reveal>
           </form>
-        <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-          <div className="fake-code">&lt;/form&gt;</div>
-        </Reveal>
+          <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+            <div className="fake-code">&lt;/form&gt;</div>
+          </Reveal>
         </div>
         
       </div>

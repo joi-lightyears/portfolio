@@ -385,7 +385,9 @@ aside{
         opacity: 0;
     }
     .content{
-        
+        .about-text{
+            margin-top: 20px;
+        }
         h1{
             font-size: 3rem;
             line-height: 4rem;
@@ -460,6 +462,9 @@ aside{
     margin-left: 150px;
     padding: 20px 0 20px 80px;
     
+    .projects-desc{
+        margin: 20px 0;
+    }
     @include tablet{
         margin: 0;
         padding-left: 50px;
