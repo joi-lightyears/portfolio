@@ -7,6 +7,7 @@ function Sidebar() {
         const aside = document.getElementById('navi')
         aside.classList.toggle('open-menu')
     }
+    
     const handleCloseBar=()=>{
         const aside = document.getElementById('navi')
         if (aside.classList.contains('open-menu')){
@@ -33,9 +34,8 @@ function Sidebar() {
                     const {text, url, icon} = link
                     return(
                         <li key={index}>
-                            <NavLink className={({isActive})=>{
-                                handleCloseBar()
-                                return !isActive? 'link-section': 'active-link'
+                            <NavLink onClick={handleCloseBar} className={({isActive})=>{
+                                return !isActive? 'links link-section': 'links active-link'
                             }} to={url}>
                                 {icon}
                                 {text}
