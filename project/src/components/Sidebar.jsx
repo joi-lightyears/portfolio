@@ -7,10 +7,18 @@ function Sidebar() {
         const aside = document.getElementById('navi')
         aside.classList.toggle('open-menu')
     }
+    const handleCloseBar=()=>{
+        const aside = document.getElementById('navi')
+        if (aside.classList.contains('open-menu')){
+            aside.classList.remove('open-menu')
+            const checkBox = document.getElementById('check-box')
+            checkBox.checked = !true
+        }
+    }
   return (
     <>
         <div className="menu-btn">
-            <input type="checkbox" onClick={handleClick}/>
+            <input id='check-box' type="checkbox" onClick={handleClick}/>
             <span></span>
             <span></span>
             <span></span>
@@ -26,6 +34,7 @@ function Sidebar() {
                     return(
                         <li key={index}>
                             <NavLink className={({isActive})=>{
+                                handleCloseBar()
                                 return !isActive? 'link-section': 'active-link'
                             }} to={url}>
                                 {icon}
