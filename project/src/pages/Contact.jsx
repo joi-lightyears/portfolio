@@ -71,9 +71,11 @@ const handleChange =(e)=>{
   return (
     <section className="contact-container">
       <div><Toaster  position="bottom-right" reverseOrder={false} toastOptions={{className: 'toast', duration: 5000,}}/></div>
+      <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+      <div className="fake-code">&lt;contact&gt;</div>
+      </Reveal>
       <div className="content">
       <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
-        <div className="fake-code">&lt;contact&gt;</div>
         <div className="fake-code">&lt;h4&gt;</div>
         </Reveal>
         <Reveal className='reveal-section' keyframes={bottomFadeIn}>
@@ -146,7 +148,6 @@ const handleChange =(e)=>{
           </form>
         <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
           <div className="fake-code">&lt;/form&gt;</div>
-          <div className="fake-code">&lt;/contact&gt;</div>
         </Reveal>
         </div>
         
@@ -158,6 +159,7 @@ const handleChange =(e)=>{
           <p>Made by Nguyen Thanh Dat 2023</p>
         </footer> */}
         <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
+          <div className="fake-code">&lt;/contact&gt;</div>
           <div className="fake-code">&lt;Made by Nguyen Thanh Dat 2023&gt;</div>
         </Reveal>
     </section>
