@@ -654,6 +654,7 @@ input:-webkit-autofill{
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+                    
                     input, textarea{
                         outline: none;
                         border: none;
@@ -661,6 +662,10 @@ input:-webkit-autofill{
                         color: #dadada;
                         padding: 10px 20px;
                         font-size: 1.1rem;
+                        transition:  0.3s ease-out;
+                        &:focus{
+                            border-bottom: 1px solid #3ac5c9;
+                        }
                     }
                 }
                 
@@ -674,6 +679,7 @@ input:-webkit-autofill{
                     align-items: center;
                     .name-input{
                         width: 49%;
+                        
                     }
                     .email-input{
                         width: 49%;

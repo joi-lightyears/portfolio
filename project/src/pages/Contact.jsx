@@ -70,7 +70,15 @@ const handleChange =(e)=>{
 }
   return (
     <section className="contact-container">
-      <div><Toaster  position="bottom-right" reverseOrder={false} toastOptions={{className: 'toast', duration: 5000,}}/></div>
+      <div><Toaster  position="bottom-right" reverseOrder={false} 
+      toastOptions={{
+        className: 'toast', 
+        duration: 5000,
+        style: {
+          background: '#2a2a2a',
+          color: '#dadada',
+        },
+      }}/></div>
       <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
       <div className="fake-code">&lt;contact&gt;</div>
       </Reveal>
