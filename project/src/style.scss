@@ -213,7 +213,7 @@ aside{
         overflow: hidden;
         z-index: -1;
         @include tablet{
-            width: 70%;
+            width: 75%;
             height: 30%;
         }
         @include mobile{
@@ -420,7 +420,9 @@ aside{
             }
             // animation: fadeIn 1s ease-out forwards;
         }
-        // .skills
+        .skills{
+            width: 100%;
+        }
     }
     .banner-texts{
         width: 100%;
@@ -492,6 +494,7 @@ aside{
         flex-direction: column;
         gap: 20px;
         overflow-y: scroll;
+        scroll-behavior: smooth;
         &::-webkit-scrollbar{
             width: 0;
         }

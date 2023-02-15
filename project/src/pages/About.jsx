@@ -33,7 +33,7 @@ function About() {
     const fadeInFromRight = keyframes`
     from {
       opacity: 0;
-      transform: translateX(400px);
+      transform: translateX(100%);
     }
     to {
         opacity: 1;

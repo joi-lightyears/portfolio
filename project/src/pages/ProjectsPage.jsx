@@ -53,9 +53,7 @@ function ProjectsPage() {
       <Reveal className='reveal-section' keyframes={bottomFadeIn}>
         <div className="projects-desc">
           <p>
-              Welcome to my coding project showcase! As a programmer,
-              I've been working on a variety of projects that demonstrate my
-                skills and interests in software development. In this showcase, 
+              Welcome to my coding project showcase! In this showcase, 
                 you'll find a collection of my most recent and noteworthy projects, 
                 each designed to showcase my technical abilities, creativity, and 
                 problem-solving skills. From web applications to mobile apps, I'm proud 
