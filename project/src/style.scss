@@ -62,6 +62,7 @@ body{
 // menubtn
 
 .menu-btn{
+    display: none;
     @include tablet{
         position: fixed;
         z-index: 11;
