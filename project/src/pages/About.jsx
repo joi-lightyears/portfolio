@@ -68,11 +68,11 @@ function About() {
           <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
             <div className="fake-code">&lt;p&gt;</div>
           </Reveal>
-          <Reveal className='reveal-section' keyframes={bottomFadeIn}>
+          {/* <Reveal className='reveal-section' keyframes={bottomFadeIn}> */}
             <p>
             I'm a third-year IT major who's passionate about learning frontend development. I'm a highly organized person who pays great attention to detail, and I believe these qualities are essential to building great software. When I'm not coding, you can usually find me exploring the latest web design trends and experimenting with new tools and technologies to keep my skills up to date.
             </p>
-          </Reveal>
+          {/* </Reveal> */}
           <Reveal className='reveal-section' keyframes={fadeInFromLeft}>
             <div className="fake-code">&lt;/p&gt;</div>
           </Reveal>
